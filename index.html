@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página para inferencia simple</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+    <!-- https://www.tensorflow.org/js/tutorials?hl=es-419 -->
+    <!-- https://cdnjs.com/libraries/tensorflow/4.5.0 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.12.0/dist/tf.min.js"></script>
+
+    <!-- Creación de contenedor de imagen de entrada -->
+    <div id="container-input">
+        <img src="#" id="input_image" width="224" height="224">
+    </div>
+    <!-- Creación botones para subir y predicción-->
+    <div id="container-button">
+        <div>
+            <input type="file" name="fileupload" accept="image/*" onchange="display(event)">
+            <p class="path">La URL de esta imagen es:</p>
+        </div>
+        <div>
+            <input class="button" type="button" name="predict" onclick="predict_animal()" value="Predicción">
+        </div>
+    </div>
+
+    <!-- Despliegue de clases y salida detectada-->
+    <div id="container-output">
+        <div id="etiquetasdeanimales" class="list">
+            <ul>
+                <li>Cangrejo</li>
+                <li>Colibrí</li>
+                <li>Elefante</li>
+                <li>Jirafa</li>
+                <li>Luciérnaga</li>
+                <li>Mono</li>
+                <li>Pavo real</li>
+                <li>Perezoso</li>
+                <li>Pingüino</li>
+                <li>Tortuga</li>
+            </ul>
+        </div>
+        <div id="output_text"></div>
+    </div>
+
+    <script src="./mis-scripts.js "></script>
+
+</body>
+
+</html>
